@@ -8,7 +8,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ListItem from 'components/ListItem';
 import { IssueIcon } from 'components/Icons';
-import './style.scss';
 
 export default class RepoListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
