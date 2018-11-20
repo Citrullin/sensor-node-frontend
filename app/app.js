@@ -19,6 +19,8 @@ import createHistory from 'history/createBrowserHistory';
 // Import root app
 import App from 'containers/App';
 
+import styles from 'styles/monki.scss';
+
 // Load the favicon
 /* eslint-disable import/no-webpack-loader-syntax */
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
