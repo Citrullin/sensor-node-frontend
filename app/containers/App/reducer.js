@@ -16,6 +16,8 @@ import {
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS,
   LOAD_REPOS_ERROR,
+
+  LOAD_NODE_GROUPS_SUCCESS
 } from './constants';
 
 // The initial state of the App
@@ -26,6 +28,7 @@ const initialState = fromJS({
   userData: {
     repositories: false,
   },
+  nodeGroups: []
 });
 
 function appReducer(state = initialState, action) {
@@ -44,6 +47,9 @@ function appReducer(state = initialState, action) {
       return state
         .set('error', action.error)
         .set('loading', false);
+    case LOAD_NODE_GROUPS_SUCCESS:
+      return state
+        .set('nodeGroups', action.nodeGroups);
     default:
       return state;
   }

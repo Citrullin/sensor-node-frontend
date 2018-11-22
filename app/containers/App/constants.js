@@ -13,3 +13,7 @@ export const LOAD_REPOS = 'boilerplate/App/LOAD_REPOS';
 export const LOAD_REPOS_SUCCESS = 'boilerplate/App/LOAD_REPOS_SUCCESS';
 export const LOAD_REPOS_ERROR = 'boilerplate/App/LOAD_REPOS_ERROR';
 export const DEFAULT_LOCALE = 'en';
+
+export const LOAD_NODE_GROUPS = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS';
+export const LOAD_NODE_GROUPS_ERROR = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS_ERROR';
+export const LOAD_NODE_GROUPS_SUCCESS = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS_SUCCESS';

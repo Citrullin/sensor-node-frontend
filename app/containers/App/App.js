@@ -11,14 +11,14 @@ import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import NodeGroup from 'containers/NodeGroup/Loadable';
+import NodeGroupList from 'containers/NodeGroupList/Loadable';
 
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 const App = () => (
-  <div className="app-wrapper">
+  <div>
     <Helmet
       titleTemplate="%s - Sensor Node"
       defaultTitle="Sensor Node"
@@ -26,11 +26,15 @@ const App = () => (
       <meta name="description" content="" />
     </Helmet>
     <Header />
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/node-group" component={NodeGroup} />
-      <Route path="" component={NotFoundPage} />
-    </Switch>
+    <main>
+      <div className="o-background-bright-lighter o-full-height">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/node-groups" component={NodeGroupList} />
+          <Route path="" component={NotFoundPage} />
+        </Switch>
+      </div>
+    </main>
     <Footer />
   </div>
 );

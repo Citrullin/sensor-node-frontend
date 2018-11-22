@@ -19,6 +19,10 @@ import {
   LOAD_REPOS,
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS_ERROR,
+
+  LOAD_NODE_GROUPS,
+  LOAD_NODE_GROUPS_SUCCESS,
+  LOAD_NODE_GROUPS_ERROR
 } from './constants';
 
 /**
@@ -60,4 +64,25 @@ export function repoLoadingError(error) {
     type: LOAD_REPOS_ERROR,
     error,
   };
+}
+
+export function loadNodeGroups(){
+  console.log("load ng");
+  return {
+    type: LOAD_NODE_GROUPS
+  };
+}
+
+export function nodeGroupLoaded(nodeGroups){
+  return {
+    type: LOAD_NODE_GROUPS_SUCCESS,
+    nodeGroups
+  }
+}
+
+export function nodeGroupLoadingError(error){
+  return {
+    type: LOAD_NODE_GROUPS_ERROR,
+    error
+  }
 }
