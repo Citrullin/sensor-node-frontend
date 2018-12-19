@@ -4,25 +4,26 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 export default class NodeGroup extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  componentDidMount() {
-    if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-    this.props.onComponentLoaded();
-  }
 
-  render(){
+  render() {
     const { loading, error, repos } = this.props;
+    const reposListProps = {
+      loading,
+      error,
+      repos
+    };
 
-    return(
-      <div className="node-group-list">
+    return (
+      <article>
         <Helmet>
           <title>Node Group</title>
-          <meta name="description" content="NodeGroup" />
+          <meta name="description" content="A React.js Boilerplate application homepage" />
         </Helmet>
         <div>
           <h1>Node Group</h1>
         </div>
-      </div>
-    )
+      </article>
+    );
   }
 }
 
