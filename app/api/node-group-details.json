@@ -1,0 +1,25 @@
+{
+  "name": "test-group",
+  "members": [
+    {
+      "name": "node_01",
+      "type": "sensor",
+      "network": [
+        {
+          "frequency": "ISM2.4",
+          "type": "BLE"
+        }
+      ]
+    },
+    {
+      "name": "node_02",
+      "type": "sensor",
+      "network": [
+        {
+          "frequency": "ISM433",
+          "type": "GFSK"
+        }
+      ]
+    }
+  ]
+}

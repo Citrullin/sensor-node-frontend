@@ -17,3 +17,7 @@ export const DEFAULT_LOCALE = 'en';
 export const LOAD_NODE_GROUPS = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS';
 export const LOAD_NODE_GROUPS_ERROR = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS_ERROR';
 export const LOAD_NODE_GROUPS_SUCCESS = 'sensor-node-dashboard/App/LOAD_NODE_GROUPS_SUCCESS';
+
+export const LOAD_NODE_GROUP_DETAILS = 'sensor-node-dashboard/App/LOAD_NODE_GROUP_DETAILS';
+export const LOAD_NODE_GROUP_DETAILS_ERROR = 'sensor-node-dashboard/App/LOAD_NODE_GROUP_DETAILS_ERROR';
+export const LOAD_NODE_GROUP_DETAILS_SUCCESS = 'sensor-node-dashboard/App/LOAD_NODE_GROUP_DETAILS_SUCCESS';

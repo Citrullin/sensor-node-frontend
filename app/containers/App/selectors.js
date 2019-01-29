@@ -33,9 +33,9 @@ const makeSelectLocation = () => createSelector(
   (routeState) => routeState.get('location').toJS()
 );
 
-const makeSelectNodeGroup = () => createSelector(
+const makeSelectNodeGroupDetails = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.get('nodeGroups')
+  (globalState) => globalState.get('nodeGroupData')
 );
 
 
@@ -47,5 +47,5 @@ export {
   makeSelectError,
   makeSelectRepos,
   makeSelectLocation,
-  makeSelectNodeGroup
+  makeSelectNodeGroupDetails
 };

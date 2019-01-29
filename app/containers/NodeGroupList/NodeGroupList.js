@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 export default class NodeGroup extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  componentDidMount() {
+    this.props.onComponentLoaded();
+  }
 
   render() {
     const { loading, error, repos } = this.props;

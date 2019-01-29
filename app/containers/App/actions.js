@@ -22,7 +22,11 @@ import {
 
   LOAD_NODE_GROUPS,
   LOAD_NODE_GROUPS_SUCCESS,
-  LOAD_NODE_GROUPS_ERROR
+  LOAD_NODE_GROUPS_ERROR,
+
+  LOAD_NODE_GROUP_DETAILS,
+  LOAD_NODE_GROUP_DETAILS_ERROR,
+  LOAD_NODE_GROUP_DETAILS_SUCCESS
 } from './constants';
 
 /**
@@ -62,12 +66,11 @@ export function reposLoaded(repos, username) {
 export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
-    error,
+    error
   };
 }
 
 export function loadNodeGroups(){
-  console.log("load ng");
   return {
     type: LOAD_NODE_GROUPS
   };
@@ -84,5 +87,25 @@ export function nodeGroupLoadingError(error){
   return {
     type: LOAD_NODE_GROUPS_ERROR,
     error
+  }
+}
+
+export function loadNodeGroupDetails(){
+  return {
+    type: LOAD_NODE_GROUP_DETAILS
+  }
+}
+
+export function repoLoadingError(error) {
+  return {
+    type: LOAD_NODE_GROUP_DETAILS_ERROR,
+    error
+  };
+}
+
+export function nodeGroupDetailsLoaded(details){
+  return {
+    type: LOAD_NODE_GROUP_DETAILS_SUCCESS,
+    details
   }
 }

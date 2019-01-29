@@ -9,11 +9,14 @@ import {
   makeSelectError
 } from 'containers/App/selectors';
 
+import { loadNodeGroups } from '../App/actions';
+
 import reducer from './reducer';
 import saga from './saga';
 import NodeGroupList from './NodeGroupList';
 
 const mapDispatchToProps = (dispatch) => ({
+  onComponentLoaded: () => dispatch(loadNodeGroups())
 });
 
 const mapStateToProps = createStructuredSelector({
